@@ -139,14 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Project2\Project2\test.cpp" />
     <ClCompile Include="Project3.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Project2\Project2\dynarr.h" />
-    <ClInclude Include="..\..\Project2\Project2\interaction.h" />
-    <ClInclude Include="..\..\Project2\Project2\linlist.h" />
-    <ClInclude Include="..\..\Project2\Project2\sequence.h" />
+    <ClInclude Include="complex.h" />
+    <ClInclude Include="dynarr.h" />
+    <ClInclude Include="linlist.h" />
+    <ClInclude Include="matrix.h" />
+    <ClInclude Include="sequence.h" />
+    <ClInclude Include="ui.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

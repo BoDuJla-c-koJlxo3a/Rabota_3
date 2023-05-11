@@ -2,9 +2,28 @@
 //
 
 #include <iostream>
+#include "ui.h"
+#include "complex.h"
 
 int main() {
-	testingInterface();
+	int c = 0;
+	while (c < 1 || c > 3) {
+		std::cout << "Choose mode:\n1 - int\n2 - float\n3 - complex\n";
+		std::cin >> c;
+	}
+	switch (c) {
+	case 1:
+		testingInterface<int>();
+		break;
+	case 2:
+		testingInterface<float>();
+		break;
+	case 3:
+		testingInterface<complex>();
+		break;
+	default:
+		break;
+	}
 	return 0;
 }
 

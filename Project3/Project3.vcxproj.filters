@@ -18,21 +18,24 @@
     <ClCompile Include="Project3.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Project2\Project2\test.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Project2\Project2\dynarr.h">
+    <ClInclude Include="matrix.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Project2\Project2\sequence.h">
+    <ClInclude Include="sequence.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Project2\Project2\linlist.h">
+    <ClInclude Include="dynarr.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Project2\Project2\interaction.h">
+    <ClInclude Include="linlist.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="ui.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="complex.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
   </ItemGroup>
