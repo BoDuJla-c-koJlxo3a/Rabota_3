@@ -3,9 +3,9 @@
 
 #include <iostream>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+	testingInterface();
+	return 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
