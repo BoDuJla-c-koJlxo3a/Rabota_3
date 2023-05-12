@@ -1,5 +1,6 @@
 #pragma once
 #include "sequence.h"
+#include "complex.h"
 
 template <class T> class Matrix {
 

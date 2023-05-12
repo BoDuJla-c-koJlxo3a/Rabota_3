@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 
-typedef struct Complex {
+struct Complex {
 
 	float re;
 	float im;
@@ -12,12 +12,22 @@ typedef struct Complex {
 		re = 0;
 		im = 0;
 	}
+	
+	Complex(int num) {
+		re = (float)num;
+		im = 0;
+	}
 
-	Complex operator+(Complex& other) {
+	Complex(float num) {
+		re = num;
+		im = 0;
+	}
+
+	Complex operator+ (Complex& other) {
 		return Complex(re + other.re, im + other.im);
 	}
 
-	Complex operator*(Complex& other) {
+	Complex operator* (Complex& other) {
 		return Complex(re*other.re - im*other.im, im*other.re + re*other.im);
 	}
 
@@ -34,4 +44,4 @@ typedef struct Complex {
 		return in;
 	}
 
-} complex;
+};

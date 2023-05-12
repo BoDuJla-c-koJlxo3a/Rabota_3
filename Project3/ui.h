@@ -91,7 +91,7 @@ void disp(entry<T>* arr, int size) {
 template <typename T>
 int modify(Matrix<T>* arr) {
 	while (true) {
-		int type = -1, m = 0, n = 0, r = 0;
+		int type = -1, m = -1, n = -1, r = 0;
 		T item;
 		std::cout << "1 - Set number\n2 - Multiply row\n3 - Multiply column\n4 - Add row\n5 - Add column\n6 - Swap rows\n7 - Swap columns\n8 - Show yor matrix\n9 - Save\n0 - Delete\n";
 		std::cin >> type;
@@ -99,8 +99,8 @@ int modify(Matrix<T>* arr) {
 		case 1:
 			std::cout << "Enter number\n>";
 			std::cin >> item;
-			while (m < 0 || m >= arr->GetHeight()) {
-				std::cout << "Enter row\n>"; "(0 - " << arr->GetHeight() - 1 << ")\n";
+			while (m < 0 || m >= arr->GetHeigth()) {
+				std::cout << "Enter row (0 - " << arr->GetHeigth() - 1 << ")\n";
 				std::cin >> m;
 			}
 			while (n < 0 || n >= arr->GetWidth()) {
@@ -113,8 +113,8 @@ int modify(Matrix<T>* arr) {
 		case 2:
 			std::cout << "Enter number\n>";
 			std::cin >> item;
-			while (m < 0 || m >= arr->GetHeight()) {
-				std::cout << "Enter row\n>"; "(0 - " << arr->GetHeight() - 1 << ")\n";
+			while (m < 0 || m >= arr->GetHeigth()) {
+				std::cout << "Enter row (0 - " << arr->GetHeigth() - 1 << ")\n";
 				std::cin >> m;
 			}
 			arr->MultRow(m, item);
@@ -131,12 +131,12 @@ int modify(Matrix<T>* arr) {
 			std::cout << "OK\n";
 			break;
 		case 4:
-			while (m < 0 || m >= arr->GetHeight()) {
-				std::cout << "Which row\n>"; "(0 - " << arr->GetHeight() - 1 << ")?\n";
+			while (m < 0 || m >= arr->GetHeigth()) {
+				std::cout << "Which row (0 - " << arr->GetHeigth() - 1 << ")?\n";
 				std::cin >> m;
 			}
-			while (n < 0 || n >= arr->GetHeight()) {
-				std::cout << "Where\n>"; "(0 - " << arr->GetHeight() - 1 << ")?\n";
+			while (n < 0 || n >= arr->GetHeigth()) {
+				std::cout << "Where (0 - " << arr->GetHeigth() - 1 << ")?\n";
 				std::cin >> n;
 			}
 			while (r < 1 || r > 2) {
@@ -153,11 +153,11 @@ int modify(Matrix<T>* arr) {
 			break;
 		case 5:
 			while (m < 0 || m >= arr->GetWidth()) {
-				std::cout << "Which column\n>"; "(0 - " << arr->GetWidth() - 1 << ")?\n";
+				std::cout << "Which column (0 - " << arr->GetWidth() - 1 << ")?\n";
 				std::cin >> m;
 			}
 			while (n < 0 || n >= arr->GetWidth()) {
-				std::cout << "Where\n>"; "(0 - " << arr->GetWidth() - 1 << ")?\n";
+				std::cout << "Where (0 - " << arr->GetWidth() - 1 << ")?\n";
 				std::cin >> n;
 			}
 			while (r < 1 || r > 2) {
@@ -173,12 +173,12 @@ int modify(Matrix<T>* arr) {
 			std::cout << "OK\n";
 			break;
 		case 6:
-			while (m < 0 || m >= arr->GetHeight()) {
-				std::cout << "Which row\n>"; "(0 - " << arr->GetHeight() - 1 << ")?\n";
+			while (m < 0 || m >= arr->GetHeigth()) {
+				std::cout << "Which row (0 - " << arr->GetHeigth() - 1 << ")?\n";
 				std::cin >> m;
 			}
-			while (n < 0 || n >= arr->GetHeight()) {
-				std::cout << "And which row\n>"; "(0 - " << arr->GetHeight() - 1 << ")?\n";
+			while (n < 0 || n >= arr->GetHeigth()) {
+				std::cout << "And which row (0 - " << arr->GetHeigth() - 1 << ")?\n";
 				std::cin >> n;
 			}
 			arr->SwapRows(m,n);
@@ -186,11 +186,11 @@ int modify(Matrix<T>* arr) {
 			break;
 		case 7:
 			while (m < 0 || m >= arr->GetWidth()) {
-				std::cout << "Which column\n>"; "(0 - " << arr->GetWidth() - 1 << ")?\n";
+				std::cout << "Which column (0 - " << arr->GetWidth() - 1 << ")?\n";
 				std::cin >> m;
 			}
 			while (n < 0 || n >= arr->GetWidth()) {
-				std::cout << "And which column\n>"; "(0 - " << arr->GetWidth() - 1 << ")?\n";
+				std::cout << "And which column (0 - " << arr->GetWidth() - 1 << ")?\n";
 				std::cin >> n;
 			}
 			arr->SwapColumns(m, n);
@@ -199,8 +199,9 @@ int modify(Matrix<T>* arr) {
 		case 8:
 			for (int i = 0; i < arr->GetHeigth(); i++) {
 				for (int j = 0; j < arr->GetWidth(); j++) {
-					std::cout << arr->GetIJ(i, j);
+					std::cout << arr->GetIJ(i, j) << ' ';
 				}
+				std::cout << '\n';
 			}
 			break;
 		case 9:
