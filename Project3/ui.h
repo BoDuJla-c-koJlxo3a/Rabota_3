@@ -146,8 +146,10 @@ int modify(Matrix<T>* arr) {
 			switch (r) {
 			case 1:
 				arr->AddRow(m, n);
+				break;
 			case 2:
 				arr->SubtractRow(m, n);
+				break;
 			}
 			std::cout << "OK\n";
 			break;
